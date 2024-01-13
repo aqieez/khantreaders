@@ -31,6 +31,7 @@ jobs:
         run: npm install -g @angular/cli
       - name: Install dependencies
         run: npm install
+        working-directory: Web/ClientApp
       - name: Print package.json content
         run: cat package.json
       - name: Build Angular App
