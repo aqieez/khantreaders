@@ -23,7 +23,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '18'
-      -  name: Navigate to Angular App directory
+      - name: Navigate to Angular App directory
         run: cd Web/ClientApp
       - name: Install Angular CLI
         run: npm install -g @angular/cli
