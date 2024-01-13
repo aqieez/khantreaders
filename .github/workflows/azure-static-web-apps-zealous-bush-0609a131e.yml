@@ -23,6 +23,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '18'
+      -  name: Navigate to Angular App directory
+        run: cd Web/ClientApp
       - name: Install Angular CLI
         run: npm install -g @angular/cli
       - name: Install dependencies
@@ -37,7 +39,7 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }} # Used for Github integrations (i.e. PR comments)
           action: "upload"
           ###### Repository/Build Configurations - These values can be configured to match your app requirements. ######
-          app_location: "dist/ClientApp" # App source code path
+          app_location: "dist/Web/ClientApp" # App source code path
           api_location: "" # Api source code path - optional
           output_location: "" # Built app content directory - optional
           ###### End of Repository/Build Configurations ######
