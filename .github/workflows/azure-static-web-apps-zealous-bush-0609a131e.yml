@@ -25,10 +25,14 @@ jobs:
           node-version: '18'
       - name: Navigate to Angular App directory
         run: cd Web/ClientApp
+      - name: Print directory structure
+        run: ls -R
       - name: Install Angular CLI
         run: npm install -g @angular/cli
       - name: Install dependencies
         run: npm install
+      - name: Print package.json content
+        run: cat package.json
       - name: Build Angular App
         run: ng build --prod
       - name: Deploy to Azure Static Web Apps
@@ -38,12 +42,8 @@ jobs:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_ZEALOUS_BUSH_0609A131E }}
           repo_token: ${{ secrets.GITHUB_TOKEN }} # Used for Github integrations (i.e. PR comments)
           action: "upload"
-          ###### Repository/Build Configurations - These values can be configured to match your app requirements. ######
-          app_location: "dist/Web/ClientApp" # App source code path
-          api_location: "" # Api source code path - optional
-          output_location: "" # Built app content directory - optional
-          ###### End of Repository/Build Configurations ######
-
+          app_location: "dist/Web/ClientApp"
+    
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
     runs-on: ubuntu-latest
