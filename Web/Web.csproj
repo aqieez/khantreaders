@@ -8,5 +8,8 @@
     <ItemGroup>
         <Content Remove="**" />
     </ItemGroup>
+    <ItemGroup>
+      <Folder Include="ClientApp\src\app\core\components\" />
+    </ItemGroup>
 
 </Project>

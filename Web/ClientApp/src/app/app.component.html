@@ -1,49 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Khan Traders - Coming Soon</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f8f8f8;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-        }
+<body class="flex flex-col h-screen bg-gray-100">
 
-        .coming-soon-container {
-            max-width: 600px;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-        }
+<!-- Flex to push footer to bottom -->
+<div class="flex-grow flex flex-col">
+  <!-- Sticky header -->
+  <app-site-header class="sticky top-0 z-50"></app-site-header>
 
-        h1 {
-            color: #333;
-        }
+  <main class="mx-auto max-w-7xl py-10 lg:py-8 lg:px-8 w-full">
+    <router-outlet></router-outlet>
+  </main>
+</div>
 
-        p {
-            color: #666;
-        }
-    </style>
-</head>
-<body>
-
-    <div class="coming-soon-container">
-        <h1>Khan Traders</h1>
-        <p>Coming Soon</p>
-    </div>
+<app-site-footer></app-site-footer>
 
 </body>
-</html>
-
-
-
-<router-outlet></router-outlet>
