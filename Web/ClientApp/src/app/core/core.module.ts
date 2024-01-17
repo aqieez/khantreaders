@@ -2,17 +2,20 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SiteHeaderComponent } from './components/site-header/site-header.component';
 import { SiteFooterComponent } from './components/site-footer/site-footer.component';
+import { ModalComponent } from './components/modal/modal.component';
 
 
 
 @NgModule({
   declarations: [
     SiteHeaderComponent,
-    SiteFooterComponent
+    SiteFooterComponent,
+    ModalComponent
   ],
   exports: [
     SiteHeaderComponent,
-    SiteFooterComponent
+    SiteFooterComponent,
+    ModalComponent
   ],
   imports: [
     CommonModule

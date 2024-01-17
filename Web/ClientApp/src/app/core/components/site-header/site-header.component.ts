@@ -4,11 +4,21 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-site-header',
   templateUrl: './site-header.component.html'
 })
-export class SiteHeaderComponent implements OnInit {
+export class SiteHeaderComponent  {
 
-  constructor() { }
+  IsMenuOpen: boolean= false
 
-  ngOnInit(): void {
+  constructor(  ) {
   }
+
+  toggleMenu(){
+    this.IsMenuOpen = ! this.IsMenuOpen
+    console.log(this.IsMenuOpen)
+  }
+
+  login(){
+
+  }
+
 
 }
