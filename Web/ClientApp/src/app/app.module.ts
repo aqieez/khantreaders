@@ -6,12 +6,16 @@ import {CoreModule} from "./core/core.module";
 import { HomeComponent } from './home/home.component';
 import { QuoteComponent } from './quote/quote.component';
 import {ReactiveFormsModule} from "@angular/forms";
+import { TestimonialComponent } from './testimonial/testimonial.component';
+import { ProductsComponent } from './products/products.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    QuoteComponent
+    QuoteComponent,
+    TestimonialComponent,
+    ProductsComponent
   ],
   imports: [
     BrowserModule,
