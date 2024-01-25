@@ -58,4 +58,8 @@ export class SiteHeaderComponent  {
   goToHome() {
     this.router.navigate(['']).then()
   }
+
+  goToQuote() {
+    this.router.navigate(['quote']).then()
+  }
 }
