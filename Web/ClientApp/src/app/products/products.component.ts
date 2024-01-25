@@ -7,10 +7,9 @@ import {Router} from "@angular/router";
 })
 export class ProductsComponent implements OnInit {
 
-  constructor(private route: Router) { }
-
-  goToProduct(){
-    this.route.navigate(['product']).then()
+  constructor(private router: Router) { }
+  goToProduct(productId: number): void {
+    this.router.navigate(['product', productId]).then();
   }
 
   ngOnInit(): void {
