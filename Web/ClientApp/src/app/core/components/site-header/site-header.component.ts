@@ -18,6 +18,20 @@ export class SiteHeaderComponent  {
   }
 
   scrollToProducts() {
+    // Check if the current route is not "/"
+    if (this.router.url !== '/') {
+      // Navigate to "/"
+      this.router.navigate(['/']).then(() => {
+        // After navigation, perform scrolling
+        this.scrollAfterNavigation();
+      });
+    } else {
+      // If already on "/", just perform scrolling
+      this.scrollAfterNavigation();
+    }
+  }
+
+  private scrollAfterNavigation() {
     const productsElement = this.el.nativeElement.ownerDocument.getElementById('products');
 
     if (productsElement) {
@@ -39,5 +53,9 @@ export class SiteHeaderComponent  {
 
   goToAbout() {
     this.router.navigate(['about']).then()
+  }
+
+  goToHome() {
+    this.router.navigate(['']).then()
   }
 }
