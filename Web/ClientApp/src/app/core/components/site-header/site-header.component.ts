@@ -1,4 +1,5 @@
 import {Component, ElementRef, OnInit, Renderer2} from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-site-header',
@@ -8,7 +9,7 @@ export class SiteHeaderComponent  {
 
   IsMenuOpen: boolean= false
 
-  constructor( private el: ElementRef, private renderer: Renderer2 ) {
+  constructor( private el: ElementRef, private renderer: Renderer2, private router: Router) {
   }
 
   toggleMenu(){
@@ -36,5 +37,7 @@ export class SiteHeaderComponent  {
   }
 
 
-
+  goToAbout() {
+    this.router.navigate(['about']).then()
+  }
 }
