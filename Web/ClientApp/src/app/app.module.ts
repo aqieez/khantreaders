@@ -8,6 +8,7 @@ import { QuoteComponent } from './quote/quote.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import { TestimonialComponent } from './testimonial/testimonial.component';
 import { ProductsComponent } from './products/products.component';
+import { ProductComponent } from './products/product/product.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ProductsComponent } from './products/products.component';
     HomeComponent,
     QuoteComponent,
     TestimonialComponent,
-    ProductsComponent
+    ProductsComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
