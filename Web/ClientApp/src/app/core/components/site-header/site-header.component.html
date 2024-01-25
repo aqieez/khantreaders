@@ -7,7 +7,9 @@
     <!-- Second part for the image -->
     <div class="flex-2">
       <div class="hidden sm:flex">
+        <button (click)="goToHome()">
       <img class="h-20 w-auto" src="./assets/logos/KT--PNG.png" alt="Khan Traders">
+        </button>
       </div>
     </div>
 
@@ -20,7 +22,7 @@
         <div class="flex space-x-12">
           <button (click)="scrollToProducts()" class="text-sm font-semibold leading-6 text-gray-900">Product</button>
           <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Features</a>
-          <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Company</a>
+          <button (click)="goToAbout()" class="text-sm font-semibold leading-6 text-gray-900">Company</button>
         </div>
       </nav>
     </div>
@@ -72,7 +74,7 @@
                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Product</a>
             <a href="#"
                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Features</a>
-            <a href="#"
+            <a (click)="goToAbout()"
                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Company</a>
           </div>
           <div class="py-6">
